@@ -16,7 +16,7 @@ set -eu
 export PGDATABASE="${POSTGRES_DB:-postgres}"
 export PGHOST="${POSTGRES_HOST:-localhost}"
 export PGPORT="${POSTGRES_PORT:-5432}"
-export PGPASSWORD="supabasePassword1234"
+export PGPASSWORD="${POSTGRES_PASSWORD:-supabasePassword1234}"
 
 # if args are supplied, simply forward to dbmate
 connect="$PGPASSWORD@$PGHOST:$PGPORT/$PGDATABASE?sslmode=disable"
